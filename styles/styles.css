@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.nav{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background-color: #008080;
+    min-height: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    z-index: 200;
+}
+.nav .nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .nav-menu .nav-item{
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+.nav .nav-menu .nav-item:hover{
+    color: black;
+}
+.nav .nav-menu .nav-item.donate{
+    padding: 10px 15px;
+    border: #fff solid 2px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.nav .nav-menu .nav-item.donate:hover{
+    border-color: black;
+    background-color: #000;
+    color: #fff;
+}
+.portal{
+    margin-top: 100px;
+    padding: 30px 40px;
+}
+.portal .header{
+    font-size: 30px;
+    font-weight: 600;
+}
+.portal .header > *{
+    margin: 5px;
+}
+.portal .header .title.amharic{
+    font-size: 25px;
+}
+.portal .body{
+    margin: 40px 0;
+    padding: 0 30px 40px;
+    border-left: #000 3px solid;
+}
+.portal .body .field{
+    margin: 15px 0 20px -15px;
+}
+.portal .body .field .title{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+.portal .body .field .title.amharic{
+    font-size: 20px;
+    margin: 5px 0;
+}
+.portal .body .form{
+    display: flex;
+    flex-direction: column;
+}
+.portal .body .form .loader{
+    position: absolute;
+    top: 180px; right: 100px;
+    background-color: transparent;
+    height: 20px;
+}
+.portal .body .form .loader::-webkit-progress-bar{
+    background-color: #ccc;
+    border-radius: 7px;
+}
+.portal .body .form .loader::-webkit-progress-value{
+    border-radius: 7px;
+    background-color: #008080;
+}
+
+.portal .body .form-section{
+    padding: 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.portal .body .form-section .primary-prompts{
+    display: flex;
+    flex-wrap: wrap;
+}
+.portal .body .form-section .prompt{
+    padding-bottom: 30px;
+    margin: 10px 40px 0 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.portal .body .form-section .prompt > *{
+    margin: 10px;
+}
+.portal .body .form-section .prompt label{
+    width: 150px;
+}
+.portal .body .form-section .prompt .registration{
+    width: 200px;
+}
+.portal .body .form-section .prompt .label{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+}
+.portal .body .form-section.wider .prompt > label{
+    width: 250px;
+}
+.portal .body .form-section .prompt .label.amharic{
+    font-weight: 300;
+}
+.portal .body .form-section .prompt .input{
+    color: #2b2b2b;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 250px;
+    background-color: #F4EFEF;
+    border: #998080 2px solid;
+}
+.portal .body .form-section .prompt .input:focus{
+    outline: none;
+    background-color: white;
+    border: #858585 2px solid;
+}
+.portal .body .form-section .prompt .required-message{
+    color: red;
+    position: absolute;
+    bottom: 0; left: 0;
+}
+.portal .body .form-section .multiple-choice .options{
+    display: flex;
+}
+.portal .body .form-section .multiple-choice .options .option{
+    display: flex;
+    width: 200px;
+}
+.portal .body .form-section .multiple-choice .options .circle{
+    margin-right: 20px;
+    height: 40px;
+    width: 40px;
+    border: #998080 2px solid;
+    background-color: #F4EFEF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.portal .body .form-section .multiple-choice .options .circle:hover{
+    background-color: #fff;
+    border: #858585 2px solid;
+    transition: all 100ms;
+}
+.portal .body .form-section .multiple-choice .options .option.selected .circle{
+    background-color: #604545;
+    border: #604545 2px solid;
+}
+.portal .body .navigation{
+    display: flex;
+    align-self: center;
+}
+.portal .body .navigation .button{
+    padding: 15px 30px;
+    margin: 0 20px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #008080;
+    font-weight: 600;
+    color: #fff;
+    font-size: 20px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.hidden{
+    display: none !important;
+}
