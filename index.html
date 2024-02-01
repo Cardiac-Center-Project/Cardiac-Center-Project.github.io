@@ -32,9 +32,7 @@
         </div>
         <div class="body">
 
-            <form action="" class="form">
-
-                <progress value="1" min="0" max="4" class="loader"></progress>
+            <form action="" method="POST" class="form" onsubmit="return(false)">
 
                 <div class="form-section">
 
@@ -50,18 +48,7 @@
                                 <div class="label">Full Name</div>
                                 <div class="label amharic">ሙሉ ስም</div>
                             </label>
-                            <input class="input" type="text" name="name"/>
-                            <div class="required-message hidden">
-                                **Please fill out this field correctly
-                            </div>
-                        </div>
-    
-                        <div class="prompt">
-                            <label class="registration" for="registration">
-                                <div class="label ">Date of registration</div>
-                                <div class="label amharic">የምዝገባ ቀን</div>
-                            </label>
-                            <input class="input" type="text" name="registration"/>
+                            <input id="name" class="input" type="text" name="name"/>
                             <div class="required-message hidden">
                                 **Please fill out this field correctly
                             </div>
@@ -72,7 +59,7 @@
                                 <div class="label">Profession</div>
                                 <div class="label amharic">የሙያ ዘርፍ</div>
                             </label>
-                            <input class="input" type="text" name="profession"/>
+                            <input id="profession" class="input" type="text" name="profession"/>
                             <div class="required-message hidden">
                                 **Please fill out this field correctly
                             </div>
@@ -105,6 +92,8 @@
                                     <div class="label amharic">ሴት</div>
                                 </div>
                             </div>
+
+                            <input id="gender" name="gender" class="hidden" type="text"/>
     
                         </div>
                         <div class="required-message hidden">
@@ -127,7 +116,24 @@
                                 <div class="label">Region</div>
                                 <div class="label amharic">ክልል</div>
                             </label>
-                            <input class="input" type="text" name="region"/>
+                            <div class="pos-relative region-parent">
+                                <input id="region" class="input region" type="text" name="region" readonly/>
+                                <div class="region-list hidden">
+                                    <div class="list-item">Addis Ababa</div>
+                                    <div class="list-item">Afar</div>
+                                    <div class="list-item">Amhara</div>
+                                    <div class="list-item">Benishamngul Gumuz</div>
+                                    <div class="list-item">Dire Dawa</div>
+                                    <div class="list-item">Gambela</div>
+                                    <div class="list-item">Tigray</div>
+                                    <div class="list-item">Harrare</div>
+                                    <div class="list-item">Oromia</div>
+                                    <div class="list-item">Sidama</div>
+                                    <div class="list-item">Somalia</div>
+                                    <div class="list-item">Southern People</div>
+                                    <div class="list-item">Southwestern People</div>
+                                </div>
+                            </div>
                             <div class="required-message hidden">
                                 **Please fill out this field correctly
                             </div>
@@ -138,7 +144,7 @@
                                 <div class="label ">City</div>
                                 <div class="label amharic">ከተማ</div>
                             </label>
-                            <input class="input" type="text" name="city"/>
+                            <input id="city" class="input" type="text" name="city"/>
                             <div class="required-message hidden">
                                 **Please fill out this field correctly
                             </div>
@@ -149,7 +155,7 @@
                                 <div class="label">Phone number</div>
                                 <div class="label amharic">ስልክ ቁጥር</div>
                             </label>
-                            <input class="input" type="text" name="number"/>
+                            <input id="number" class="input number" type="number" name="number"/>
                             <div class="required-message hidden">
                                 **Please fill out this field correctly
                             </div>
@@ -160,7 +166,7 @@
                                 <div class="label">Email</div>
                                 <div class="label amharic">ኢሜይል</div>
                             </label>
-                            <input class="input" type="text" name="email"/>
+                            <input id="email" class="input" type="text" name="email"/>
                             <div class="required-message hidden">
                                 **Please fill out this field correctly
                             </div>
@@ -173,7 +179,7 @@
 
                     <div class="field">
                         <div class="title">Membership Information</div>
-                        <div class="title amharic">Text in amharic</div>
+                        <div class="title amharic">የአባልነት መረጃ</div>
                     </div>
 
                     <div class="primary-prompts">
@@ -181,7 +187,7 @@
     
                             <label>
                                 <div class="label">Membership type</div>
-                                <div class="label amharic">ጾታ</div>
+                                <div class="label amharic">የአባልነት አይነት</div>
                             </label>
         
                             <div class="options">
@@ -217,8 +223,11 @@
                                         <div class="label amharic">ወርቅ</div>
                                     </div>
                                 </div>
+
+                                <input id="membership" name="membership" class="hidden" type="text"/>
         
                             </div>
+
                             <div class="required-message hidden">
                                 **Please fill out this field correctly
                             </div>
@@ -226,13 +235,27 @@
                         </div>
 
                         <div class="prompt">
+                            <label>
+                                <div class="label">Membership Description</div>
+                                <div class="label amharic">የአባልነት አይነት ገለጻ</div>
+                            </label>
+                            <div class="membership-descriptions">
+                                <div class="default">Please select a membership type</div>
+                                <div class="regular hidden">The Membership type you selected above cost ranges from a 100 to a 1000 ETB annualy</div>
+                                <div class="bronze hidden">The Membership type you selected above cost ranges from a 1001 to a 10000 ETB annualy</div>
+                                <div class="silver hidden">The Membership type you selected above cost ranges from a 10001 to a 50000 ETB annualy</div>
+                                <div class="gold hidden">The Membership type you selected above cost ranges from a 50001 to a 100000 ETB annualy</div>
+                            </div>
+                        </div>
+
+                        <div class="prompt">
                             <label for="amount">
                                 <div class="label">Amount in ETB</div>
                                 <div class="label amharic">የገንዘብ መጠን በኢትዮጵያ ብር</div>
                             </label>
-                            <input class="input" type="text" name="profession"/>
+                            <input id="amount" class="input" type="number" name="amount"/>
                             <div class="required-message hidden">
-                                **Please fill out this field correctly
+                                **Invalid amount
                             </div>
                         </div>
 
@@ -240,7 +263,7 @@
     
                             <label>
                                 <div class="label">Payment Schedule</div>
-                                <div class="label amharic">ጾታ</div>
+                                <div class="label amharic">የክፍያ ፕሮግራም</div>
                             </label>
         
                             <div class="options">
@@ -276,6 +299,8 @@
                                         <div class="label amharic">አመታዊ</div>
                                     </div>
                                 </div>
+
+                                <input id="payment" name="payment" class="hidden" type="text"/>
         
                             </div>
                             <div class="required-message hidden">
@@ -286,15 +311,20 @@
                     </div>
     
                 </div>
+                <div class="form-section completed hidden">
+                    <div>Submitted Succesfully</div>
+                </div>
                 <div class="navigation">
                     <div class="button previous hidden">Previous</div>
                     <div class="button next">Next</div>
+                    <button class="button hidden submit" type="submit">Submit</button>
                 </div>
 
             </form>
 
         </div>
     </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
